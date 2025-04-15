@@ -1,0 +1,22 @@
+commands-
+1. docker pull hello-world
+2. docker run hello-world
+3. docker pull ubuntu
+4. docker run -it ubuntu
+5. docker stop "id"
+6. exit
+
+Docker network-
+
+commands-
+1. docker network ls
+2. docker network create mongo-network
+3. docker run -d -p 27017 --name mongo --network mongo-network -e MONGO_INIDB_ROOT_USERNAME=admin MONGO_INIDB_ROOT_PASSWORD=admin mongo
+
+#-p = port binding
+ -d = detach mode
+4. docker ps
+5. docker ps -a
+6. docker network inspect MONGO-network
+7. docker run -p -d 8081:8081 --name mongo-express --network mongo-network -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=admin -e 
+ME_CONFIG_MONGODB_URL="mongo://admin:admin@mongo:27071" mongo-express
